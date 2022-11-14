@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Courses
+        </title>
+    </head>
+    <body>
+        <div style="display: block;">
+        <h1>Courses list   <a href = "/">Go to Students</a></h1> 
+    </div>
+
+    <table id = "all-courses">
+        
+            <tr>
+            <th>SNo</th>
+            <th>Course Code</th>
+            <th>Course Name</th>
+            <th>Course Description</th>
+            <th>Actions</th>
+            </tr>
+            {% for i in range(length) %}
+            <tr>
+                <td>{{i+1}}</td>
+                <td><a href="/course/{{student[i].course_id}}">{{student[i].course_code}}</a></td>
+                <td>{{student[i].course_name}}</td>
+                <td>{{student[i].course_description}}</td>
+                <td>
+                    <a href="/course/{{student[i].course_id}}/update" type="button">Update</a>
+                    <a href="/course/{{student[i].course_id}}/delete" type="button">Delete</a>
+                </td>
+
+            </tr>
+        {%endfor%}
+        </table>
+
+        <a href = "/course/create">+Add Course</a>
+    </body>
+    </html>

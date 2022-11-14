@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <title>Add Student</title>
+</head>
+<html>
+
+<body>
+    <form action="#" method="POST" id="update-course-form">
+        <div>
+        <label>Course Code:</label>
+        <input type="text" name="code" value="{{current_code}}" disabled />
+        </div>
+        <div>
+        <label>Course Name:</label>
+        <input type="text" name="c_name" value="{{x.course_name}}" required />
+        </div>
+        <div>
+        <label>Course Description:</label>
+        <input type="text" name="desc" value="{{x.course_description}}"/>
+        </div>
+        <div>
+        <input type="submit" value = "Submit">
+        </div>
+        </form>
+</body>
+</html>
